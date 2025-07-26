@@ -17,7 +17,19 @@ with content:
 ```options snd-sof-intel-hda-generic hda_model=alc287-yoga9-bass-spk-pin```
 
 ### Fix WiFi not working after suspense
-idk yet
+add the following systemd unit in /etc/systemd/system/:
+```
+[Unit]
+Description=Disable D3cold for WiFi
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "echo 0 > /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed"
+
+[Install]
+WantedBy=multi-user.target
+```
 
 
 Useful links:
