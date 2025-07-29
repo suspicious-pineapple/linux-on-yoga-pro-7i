@@ -5,7 +5,7 @@ Issues encountered:
 - Trackpad and touch not working on mint
 - No audio on Pop!_OS by default
 - If audio works, very high pitched and low volume
-- No WiFI after waking up from suspend
+- No WiFi after waking up from suspend
 
 
 (Using Fedora KDE)
